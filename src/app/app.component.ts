@@ -1,17 +1,10 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router'; // just import the module, no forRoot()
-import { routes } from './app.routes';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterModule,   // just the module here
-    FormsModule,
-    HttpClientModule
-  ],
+  imports: [RouterModule],  // ✅ RouterModule only
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

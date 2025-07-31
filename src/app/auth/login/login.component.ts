@@ -8,14 +8,15 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
+  standalone: true, // ✅ since it's a standalone component
+  imports: [FormsModule], // ✅ import FormsModule here
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   email = '';
   password = '';
-  role = 'USER'; // or 'ADMIN'
-
+  role = '';
   constructor(
     private userService: UserService,
     private adminService: AdminService,
