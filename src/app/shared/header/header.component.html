@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+  </div>
+  <div class="navbar-brand">
+  <a routerLink="/" class="app-name">
+    <svg class="logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 4L4 16L16 28L28 16L16 4Z" fill="#3a7bd5"/>
+      <path d="M16 8L8 16L16 24L24 16L16 8Z" fill="#00d2ff"/>
+      <path d="M16 12L12 16L16 20L20 16L16 12Z" fill="#45b649"/>
+      <path d="M16 14L14 16L16 18L18 16L16 14Z" fill="#ffffff"/>
+    </svg>
+    {{ appName }}
+  </a>
+</div>
+  <ul class="nav-links">
+    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
+    <li><a routerLink="/user/dashboard" routerLinkActive="active">User Dashboard</a></li>
+    <li><a routerLink="/admin/dashboard" routerLinkActive="active">Admin Dashboard</a></li>
+    <li><a routerLink="/admin/products" routerLinkActive="active">Products</a></li>
+    <li><a routerLink="/demande/create" routerLinkActive="active">Create Demande</a></li>
+  </ul>
+  <div class="user-profile">
+    <a routerLink="/user/profile">Profile</a>
+  </div>
+</nav>

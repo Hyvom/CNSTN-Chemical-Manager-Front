@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
-import { UserDashboardComponent } from './user/dashboard/dashboard.component';
-import { AdminDashboardComponent } from './admin/dashboard/dashboard.component';
+import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { CreateComponent } from './demande/create/create.component';
 import { ProductListComponent } from './admin/product-list/product-list.component';
 import { EditProductComponent } from './admin/edit-product/edit-product.component';
+
 
 
 export const routes: Routes = [
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'demande/create', component: CreateComponent },
   { path: 'admin/products', component: ProductListComponent },
   { path: 'admin/edit-product/:id', component: EditProductComponent },
+
 
 
 

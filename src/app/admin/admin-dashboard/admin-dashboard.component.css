@@ -1,0 +1,26 @@
+.admin-dashboard {
+  padding: 2rem;
+
+  h2 {
+    color: #9d0208;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 1rem 0;
+
+      a {
+        color: #9d0208;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
