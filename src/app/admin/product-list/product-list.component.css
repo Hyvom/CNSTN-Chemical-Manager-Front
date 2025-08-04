@@ -1,0 +1,143 @@
+/* Table Container */
+.table-container {
+  max-width: 100%;
+  margin: 2rem auto;
+  overflow-x: auto;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9f5ff 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+/* Table Header */
+thead {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+thead tr {
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+thead th {
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+}
+
+thead th:first-child {
+  border-top-left-radius: 12px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Table Body */
+tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: rgba(58, 123, 213, 0.05);
+}
+
+tbody td {
+  padding: 12px;
+  color: #2c3e50;
+  position: relative;
+}
+
+/* Zebra Striping */
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+tbody tr:nth-child(even):hover {
+  background-color: rgba(58, 123, 213, 0.05);
+}
+
+/* Action Buttons */
+td button {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+td button:last-child {
+  margin-right: 0;
+}
+
+/* Edit Button */
+button:first-child {
+  background-color: #45b649;
+  color: white;
+}
+
+button:first-child:hover {
+  background-color: #3aa344;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(69, 182, 73, 0.3);
+}
+
+/* Delete Button */
+button:last-child {
+  background-color: #ff5e62;
+  color: white;
+}
+
+button:last-child:hover {
+  background-color: #e74c3c;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(231, 76, 60, 0.3);
+}
+
+/* Chemical Theme Elements */
+.table-container::before {
+  content: "⚗️";
+  position: absolute;
+  font-size: 1.5rem;
+  right: 20px;
+  top: 15px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  thead th, tbody td {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+
+  td button {
+    padding: 5px 8px;
+    margin-right: 5px;
+    font-size: 0.75rem;
+  }
+}

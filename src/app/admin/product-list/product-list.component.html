@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Liste des Produits</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Quantité</th>
+      <th>Unité</th>
+      <th>Type</th>
+      <th>Magasin</th>
+      <th>Date d'Ajout</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produit of produits">
+      <td>{{ produit.id }}</td>
+      <td>{{ produit.nom }}</td>
+      <td>{{ produit.quantite }}</td>
+      <td>{{ produit.unite }}</td>
+      <td>{{ produit.type }}</td>
+      <td>{{ produit.magasin?.nom }}</td>
+      <td>{{ produit.dateAjout | date }}</td>
+      <td>
+        <button (click)="onEdit(produit.id)">Modifier</button>
+        <button (click)="onDelete(produit.id)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

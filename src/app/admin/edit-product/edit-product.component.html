@@ -1,0 +1,19 @@
+<h2>Modifier Produit</h2>
+<form (ngSubmit)="updateProduit()">
+  <label>Nom :</label>
+  <input [(ngModel)]="produit.nom" name="nom" required />
+
+  <label>Quantité :</label>
+  <input type="number" [(ngModel)]="produit.quantite" name="quantite" required />
+
+  <label>Unité :</label>
+  <input [(ngModel)]="produit.unite" name="unite" required />
+
+  <label>Type :</label>
+  <input [(ngModel)]="produit.type" name="type" required />
+
+  <label>Magasin ID :</label>
+  <input type="number" [(ngModel)]="produit.magasinId" name="magasinId" required />
+
+  <button type="submit">Enregistrer</button>
+</form>

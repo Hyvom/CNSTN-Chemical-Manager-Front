@@ -1,0 +1,149 @@
+/* Edit Product Form Container */
+.edit-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9f5ff 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.edit-form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg,
+    #3a7bd5 0%,
+    #00d2ff 20%,
+    #45b649 40%,
+    #f46b45 60%,
+    #ee0979 80%,
+    #ff5e62 100%);
+}
+
+.edit-form-container h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.edit-form-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #3a7bd5;
+  border-radius: 3px;
+}
+
+/* Form Elements */
+.edit-form-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.edit-form-container label {
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: -10px;
+  display: flex;
+  align-items: center;
+  grid-column: span 2;
+}
+
+.edit-form-container label::before {
+  content: "🧪";
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+.edit-form-container input {
+  padding: 12px 15px;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-column: span 2;
+}
+
+.edit-form-container input:focus {
+  outline: none;
+  border-color: #3a7bd5;
+  box-shadow: 0 0 0 3px rgba(58, 123, 213, 0.2);
+  background-color: white;
+}
+
+/* Quantity and Magasin ID - make these half width */
+.edit-form-container input[type="number"] {
+  grid-column: span 1;
+}
+
+/* Submit Button */
+.edit-form-container button[type="submit"] {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #45b649 0%, #3aa344 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.edit-form-container button[type="submit"]:hover {
+  background: linear-gradient(135deg, #3aa344 0%, #2e8b3a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(69, 182, 73, 0.3);
+}
+
+.edit-form-container button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Chemical flask animation */
+.edit-form-container::after {
+  content: "⚗️";
+  position: absolute;
+  font-size: 1.5rem;
+  right: 30px;
+  top: 30px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .edit-form-container form {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-form-container label,
+  .edit-form-container input,
+  .edit-form-container button[type="submit"] {
+    grid-column: span 1;
+  }
+
+  .edit-form-container {
+    padding: 1.5rem;
+  }
+}

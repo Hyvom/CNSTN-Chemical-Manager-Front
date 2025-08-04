@@ -1,0 +1,19 @@
+<div class="form-container">
+  <h2>Faire une Demande de Produit</h2>
+
+  <form (ngSubmit)="envoyerDemande()">
+    <label>Produit :</label>
+    <input type="text" [(ngModel)]="produitId" name="produitId" required />
+
+    <label>Quantité :</label>
+    <input type="number" [(ngModel)]="quantite" name="quantite" required />
+
+    <label>Service / Laboratoire :</label>
+    <input type="text" [(ngModel)]="service" name="service" required />
+
+    <label>Commentaire :</label>
+    <textarea [(ngModel)]="commentaire" name="commentaire"></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+</div>

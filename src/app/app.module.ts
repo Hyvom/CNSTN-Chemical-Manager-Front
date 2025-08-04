@@ -9,7 +9,6 @@ import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
-    LoginComponent, // only non-standalone components here
   ],
   imports: [
     BrowserModule,
