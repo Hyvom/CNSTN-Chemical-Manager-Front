@@ -7,7 +7,7 @@ import { FooterComponent } from "./shared/footer/footer.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, HeaderComponent, FooterComponent],  // ✅ RouterModule only
+  imports: [RouterModule, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
